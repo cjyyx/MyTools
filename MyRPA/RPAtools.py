@@ -1,9 +1,8 @@
-import pyautogui
 import time
 
+import keyboard
+import pyautogui
 import pyperclip
- 
-
 
 
 def output_mouse_position():
@@ -68,3 +67,17 @@ def mouse_scroll(distance:int):
 
 def slp(times:int):
     time.sleep(times)
+
+is_altx=False
+def test_a():
+    global is_altx
+    is_altx=True
+
+def wait_start():
+    print('请按alt+x开始')
+    keyboard.wait('alt+x')
+    keyboard.add_hotkey('alt+x',test_a)
+    print('现在开始')
+
+def is_exit():
+    return is_altx
