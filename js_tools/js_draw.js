@@ -1,4 +1,6 @@
+
 function draw(rgb_array) {
+    /* 将RGB数组表示的图片绘制到Canvas上 */
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
@@ -18,6 +20,4 @@ function draw(rgb_array) {
     }
     ctx.putImageData(imgData, 10, 10);
     console.log("ok");
-
-
 }
